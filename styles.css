@@ -1,0 +1,109 @@
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container {
+  height: 100vh;
+  background: linear-gradient(
+    90deg,
+    hsla(29, 92%, 70%, 1) 0%,
+    hsla(0, 87%, 73%, 1) 100%
+  );
+}
+.main-wrap {
+  background-color: #fff;
+  text-align: center;
+  padding: 40px 10px;
+  width: 50%;
+  min-width: 400px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  border-radius: 5px;
+  font-family: "Poppins", sans-serif;
+  box-shadow: 30px 25px 30px rgba(0, 0, 0, 0.15);
+}
+@media only screen and (max-width: 600px) {
+  .main-wrap {
+    width: 80%;
+    min-width: 340px;
+  }
+}
+.grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.sub-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sub-grid label {
+  display: inline-block;
+  background-color: #ddd;
+  padding: 10px 20px;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  border: 2px solid #444;
+  border-radius: 4px;
+}
+.sub-grid label:hover {
+  background-color: #dfd;
+}
+.sub-grid input[type="radio"]:focus + label {
+  border: 2px dashed #444;
+}
+
+.sub-grid input[type="radio"]:checked + label {
+  background-color: #bfb;
+  border-color: #4c4;
+}
+.sub-grid input[type="radio"] {
+  opacity: 0;
+  position: fixed;
+  width: 0;
+}
+.gender {
+  display: flex;
+  position: relative;
+  cursor: pointer;
+  margin-left: 25px;
+  align-items: center;
+}
+.grid span {
+  font-size: 500;
+}
+input[type="range"] {
+  width: 65%;
+  height: 3.54px;
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: #e7e7e7;
+  border-radius: 5px;
+  outline: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: #1c1c1c;
+  cursor: pointer;
+}
+#result {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #0be881;
+}
+#category {
+  font-size: 20px;
+  letter-spacing: 2px;
+}
